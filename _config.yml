@@ -7,10 +7,10 @@ permalink: pretty
 collections:
   posts:
     output: true
-    permalink: /:name/ # Ensure posts are available from the root
+    permalink: /:name 
   pages:
     output: true
-    permalink: /:name/
+    permalink: /:name
 
 defaults:
   - scope:
