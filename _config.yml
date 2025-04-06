@@ -14,3 +14,14 @@ collections:
   pages:
     output: true
     permalink: /:name/
+
+defaults:
+  - scope:
+      path: "posts"
+    values:
+      layout: default
+
+  - scope:
+      path: "pages"
+    values:
+      layout: default
