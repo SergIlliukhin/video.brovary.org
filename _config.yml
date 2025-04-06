@@ -1,0 +1,27 @@
+title: Відеопрозорість Бровари
+baseurl: "" # leave this empty for GitHub Pages
+markdown: kramdown
+permalink: pretty
+
+# Treat /posts as the main content
+collections:
+  posts:
+    output: true
+    permalink: /:name/
+
+# Treat /pages as additional content
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: "posts"
+    values:
+      layout: default
+
+  - scope:
+      path: "pages"
+    values:
+      layout: default
