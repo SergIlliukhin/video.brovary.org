@@ -14,10 +14,12 @@ collections:
 
 defaults:
   - scope:
-      path: "posts"
+      path: ""
+      type: "posts"
     values:
       layout: default
   - scope:
-      path: "pages"
+      path: ""
+      type: "pages"
     values:
       layout: default
