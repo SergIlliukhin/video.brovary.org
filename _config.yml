@@ -7,8 +7,10 @@ permalink: /:name
 collections:
   posts:
     output: true
+    permalink: /:name 
   pages:
     output: true
+    permalink: /:name
 
 defaults:
   - scope:
