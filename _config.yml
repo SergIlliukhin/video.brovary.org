@@ -1,5 +1,5 @@
 title: Відеопрозорість Бровари
-baseurl: "" # leave this empty for GitHub Pages
+baseurl: "" # Set this to "/repository-name" if hosted on a subpath
 markdown: kramdown
 permalink: pretty
 
@@ -7,10 +7,17 @@ permalink: pretty
 collections:
   posts:
     output: true
+    permalink: /:name/ # Ensure posts are available from the root
+  pages:
+    output: true
     permalink: /:name/
 
 defaults:
   - scope:
       path: "posts"
+    values:
+      layout: default
+  - scope:
+      path: "pages"
     values:
       layout: default
