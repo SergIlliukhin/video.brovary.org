@@ -1,16 +1,14 @@
 title: Відеопрозорість Бровари
 baseurl: "" # Set this to "/repository-name" if hosted on a subpath
 markdown: kramdown
-permalink: pretty
+permalink: /:name
 
 # Define collections
 collections:
   posts:
     output: true
-    permalink: /:name 
   pages:
     output: true
-    permalink: /:name
 
 defaults:
   - scope:
