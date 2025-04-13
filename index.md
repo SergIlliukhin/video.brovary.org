@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Головна
-coverImage: /assets/images/home-cover.svg
+coverImage: /assets/images/header.jpeg
 ---
 
 # {{ site.title }}
