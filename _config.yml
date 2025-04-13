@@ -6,7 +6,7 @@ url: "https://sergilliukhin.github.io" # the base hostname & protocol for your s
 # Build settings
 markdown: kramdown
 theme: minima
-permalink: /:name/
+permalink: /:title/
 
 # Collections
 collections:
@@ -28,6 +28,7 @@ defaults:
     values:
       layout: "post"
       coverImage: "{{ page.coverImage }}"
+      permalink: /:title/
 
 # Plugins
 plugins:
