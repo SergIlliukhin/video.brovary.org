@@ -13,10 +13,10 @@
       {% assign url = 'https://' | append: part %}
       {% if url contains 'youtu.be/' %}
         {% assign video_id = url | split: 'youtu.be/' | last | split: ' ' | first | split: '?' | first | split: '[/embed]' | first | split: '<' | first | split: '>' | first | split: '"' | first | split: "'" | first | strip %}
-        {% assign remaining = url | remove_first: 'youtu.be/' | remove_first: video_id %}
+        {% assign remaining = part | remove_first: 'youtu.be/' | remove_first: video_id %}
       {% elsif url contains 'youtube.com/watch?v=' %}
         {% assign video_id = url | split: 'youtube.com/watch?v=' | last | split: ' ' | first | split: '?' | first | split: '[/embed]' | first | split: '<' | first | split: '>' | first | split: '"' | first | split: "'" | first | strip %}
-        {% assign remaining = url | remove_first: 'youtube.com/watch?v=' | remove_first: video_id %}
+        {% assign remaining = part | remove_first: 'youtube.com/watch?v=' | remove_first: video_id %}
       {% endif %}
       
       {% if video_id %}
