@@ -1,5 +1,35 @@
 <header class="site-header">
   <div class="wrapper">
-    <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <div class="header-content">
+      <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      {% include search_bar.html %}
+    </div>
   </div>
-</header> 
+</header>
+
+<style>
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.search-container {
+  margin: 0;
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .search-container {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+</style> 
