@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Home
+title: Головна
 coverImage: /assets/images/home-cover.svg
 ---
 
@@ -8,13 +8,7 @@ coverImage: /assets/images/home-cover.svg
 
 {{ site.description }}
 
-## Recent Posts
-
-{% for post in site.posts limit:3 %}
-- [{{ post.title }}]({{ post.url | relative_url }}) - {{ post.date | date: "%B %d, %Y" }}
-{% endfor %}
-
-## Pages
+## Публікації
 
 {% for page in site.pages %}
 {% if page.title and page.title != "Home" %}
