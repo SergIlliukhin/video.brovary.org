@@ -3,7 +3,7 @@ title: "13-та чергова сесія Броварської міської 
 date: 2016-04-21
 categories: 
   - "sesiyi-brovarskoi-miskoi-rady"
-coverImage: "wp-top-6.jpg"
+coverImage: "WP-top-6.jpg"
 ---
 
 21 квітня 2016 року відбулася 13-та чергова сесія Броварської міської ради 7-го скликання<!--more-->
