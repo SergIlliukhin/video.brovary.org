@@ -1,0 +1,16 @@
+{% assign content_with_embeds = content %}
+{% assign youtube_links = content | split: 'https://youtu.be/' %}
+{% if youtube_links.size > 1 %}
+  {% assign content_with_embeds = '' %}
+  {% for part in youtube_links %}
+    {% if forloop.first %}
+      {% assign content_with_embeds = part %}
+    {% else %}
+      {% assign video_id = part | split: ' ' | first | split: '?' | first | split: '[/embed]' | first | split: '<' | first | split: '>' | first | split: '"' | first | split: "'" | first | strip %}
+      {% assign content_with_embeds = content_with_embeds | append: '<div class="youtube-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/' | append: video_id | append: '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>' %}
+      {% assign remaining = part | remove_first: video_id %}
+      {% assign content_with_embeds = content_with_embeds | append: remaining %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{{ content_with_embeds }} 
