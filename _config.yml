@@ -21,11 +21,13 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+      coverImage: "/assets/images/{{ page.coverImage }}"
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+      coverImage: "/assets/images/{{ page.coverImage }}"
 
 # Plugins
 plugins:
