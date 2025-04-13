@@ -27,5 +27,7 @@
       {% endif %}
     {% endif %}
   {% endfor %}
+{% else %}
+  {% assign content_with_embeds = content %}
 {% endif %}
 {{ content_with_embeds }} 
