@@ -5,7 +5,7 @@ layout: default
 <article class="page">
   {% if page.coverImage %}
   <div class="page-cover">
-    <img src="{{ page.coverImage | relative_url }}" alt="{{ page.title }} cover image">
+    <img src="{{ page.coverImage | prepend: '/assets/images/' | relative_url }}" alt="{{ page.title }} cover image">
   </div>
   {% endif %}
 
