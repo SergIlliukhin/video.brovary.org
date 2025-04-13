@@ -14,6 +14,8 @@ layout: default
   </header>
 
   <div class="page-content">
-    {{ content | youtube_embed }}
+    {% assign content_with_embeds = content | replace: 'https://youtu.be/', '<div class="youtube-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/' | replace: 'https://www.youtube.com/watch?v=', '<div class="youtube-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/' %}
+    {% assign content_with_embeds = content_with_embeds | replace: '[embed]https://youtu.be/', '<div class="youtube-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/' | replace: '[/embed]', '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>' %}
+    {{ content_with_embeds }}
   </div>
 </article> 
