@@ -1,6 +1,6 @@
-title: My Jekyll Site
-description: A simple Jekyll site with pages and posts
-baseurl: "/poc-github-pages" # the subpath of your site, e.g. /blog
+title: Відеопрозорість Бровари
+description: Бровари. Політичні та суспільні відеоновини
+baseurl: "/video.brovary.org" # the subpath of your site, e.g. /blog
 url: "https://sergilliukhin.github.io" # the base hostname & protocol for your site
 
 # Build settings
