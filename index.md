@@ -4,9 +4,9 @@ title: Home
 coverImage: /assets/images/home-cover.svg
 ---
 
-# Welcome to My Jekyll Site
+# {{ site.title }}
 
-This is a sample Jekyll site built for GitHub Pages.
+{{ site.description }}
 
 ## Recent Posts
 
