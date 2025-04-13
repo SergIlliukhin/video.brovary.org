@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<article class="page">
+  {% if page.coverImage %}
+  <div class="page-cover">
+    <img src="{{ page.coverImage | relative_url }}" alt="{{ page.title }} cover image">
+  </div>
+  {% endif %}
+
+  <header class="page-header">
+    <h1 class="page-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="page-content">
+    {{ content }}
+  </div>
+</article> 

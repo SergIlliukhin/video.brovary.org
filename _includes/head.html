@@ -1,0 +1,46 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+
+  <style>
+    .post-cover, .page-cover, .home-cover {
+      width: 100%;
+      max-height: 200px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+
+    .post-cover img, .page-cover img, .home-cover img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+    }
+
+    .post, .page, .home {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .post-header, .page-header {
+      margin-bottom: 2rem;
+    }
+
+    .post-title, .page-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .post-content, .page-content, .home-content {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head> 

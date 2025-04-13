@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="home">
+  {% if page.coverImage %}
+  <div class="home-cover">
+    <img src="{{ page.coverImage | relative_url }}" alt="{{ page.title }} cover image">
+  </div>
+  {% endif %}
+
+  <div class="home-content">
+    {{ content }}
+  </div>
+</div> 

@@ -1,28 +1,40 @@
-title: Відеопрозорість Бровари
-baseurl: "" # Set this to "/repository-name" if hosted on a subpath
-markdown: kramdown
-permalink: /:name
+title: My Jekyll Site
+description: A simple Jekyll site with pages and posts
+baseurl: "/poc-github-pages" # the subpath of your site, e.g. /blog
+url: "https://sergilliukhin.github.io" # the base hostname & protocol for your site
 
-# Define collections
+# Build settings
+markdown: kramdown
+theme: minima
+permalink: /:name/
+
+# Collections
 collections:
-  posts:
-    output: true
-    permalink: /:name 
-    source: posts
   pages:
     output: true
-    permalink: /:name
+    permalink: /:title/
 
+# Default front matter
 defaults:
-  - scope:
-      path: ""
-      type: "posts" 
-    values:
-      layout: default
   - scope:
       path: ""
       type: "pages"
     values:
-      layout: default
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
-include: ["posts", "pages"]
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor 
