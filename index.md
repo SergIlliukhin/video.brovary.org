@@ -11,5 +11,5 @@ coverImage: /assets/images/header.jpeg
 ## Публікації
 
 {% for post in site.posts %}
-- [{{ post.title }}]({{ post.url | relative_url }}) - {% include ukrainian_date.html date=post.date %}
+- [{{ post.title }}]({{ post.url | relative_url }}) - {{ post.date | date: "%d.%m.%Y" }}
 {% endfor %}
