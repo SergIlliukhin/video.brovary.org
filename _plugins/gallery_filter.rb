@@ -1,7 +1,7 @@
 module Jekyll
   module GalleryFilter
     def transform_gallery(content)
-      # First handle escaped shortcodes without paragraph tags
+      # Handle escaped shortcodes without paragraph tags
       content = content.gsub(/\\\[gallery[^\]]*\\\]/) do |match|
         # Extract the ids parameter using a more flexible approach
         ids_match = match.match(/ids=["']?([^"'\]]+)["']?/)
@@ -12,7 +12,7 @@ module Jekyll
         end
       end
       
-      # Then handle unescaped shortcodes without paragraph tags
+      # Handle unescaped shortcodes without paragraph tags
       content = content.gsub(/\[gallery[^\]]*\]/) do |match|
         # Extract the ids parameter using a more flexible approach
         ids_match = match.match(/ids=["']?([^"'\]]+)["']?/)
