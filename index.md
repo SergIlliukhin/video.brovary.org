@@ -21,7 +21,7 @@ coverImage: /assets/images/header.jpeg
   <div class="gallery">
     {% for image in images %}
       <div class="gallery-item">
-        <img src="/assets/images/{{ image.image_name }}" alt="Image {{ image.image_id }}" class="gallery-image">
+        <img src="/video.brovary.org/assets/images/{{ image.image_name }}" alt="Image {{ image.image_id }}" class="gallery-image">
         <p>ID: {{ image.image_id }}</p>
       </div>
     {% endfor %}
