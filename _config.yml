@@ -29,6 +29,11 @@ defaults:
       layout: "post"
       coverImage: "{{ page.coverImage }}"
       permalink: /:title/
+  - scope:
+      path: "404.md"
+    values:
+      layout: "home"
+      permalink: /404.html
 
 # Plugins
 plugins:
