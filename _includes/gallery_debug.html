@@ -1,0 +1,17 @@
+{% assign images = site.data.wp_images %}
+{% if images %}
+  <div class="gallery-debug">
+    <h3>Gallery Debug Info</h3>
+    <p>Total images loaded: {{ images.size }}</p>
+    <ul>
+      {% for image in images limit:5 %}
+        <li>ID: {{ image.id }}, URL: {{ image.url }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% else %}
+  <div class="gallery-debug">
+    <h3>Gallery Debug Info</h3>
+    <p>No images loaded from CSV</p>
+  </div>
+{% endif %} 
