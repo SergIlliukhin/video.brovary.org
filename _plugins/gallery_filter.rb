@@ -1,46 +1,47 @@
 module Jekyll
   module GalleryFilter
-    def transform_gallery(content)
-      # Handle escaped shortcodes without paragraph tags
-      content = content.gsub(/\\\[gallery[^\]]*\\\]/) do |match|
-        # Extract the ids parameter using a more flexible approach
-        ids_match = match.match(/ids=["']?([^"'\]]+)["']?/)
-        if ids_match
-          process_gallery(ids_match[1])
-        else
-          match
-        end
+    def transform_gallery(input)
+      return input unless input.is_a?(String)
+      
+      # Handle gallery shortcodes with escaped brackets
+      input = input.gsub(/\\\[gallery[^\]]*ids=["']([^"'\]]+)["'][^\]]*\\\]/) do |match|
+        process_gallery($1)
       end
       
-      # Handle unescaped shortcodes without paragraph tags
-      content = content.gsub(/\[gallery[^\]]*\]/) do |match|
-        # Extract the ids parameter using a more flexible approach
-        ids_match = match.match(/ids=["']?([^"'\]]+)["']?/)
-        if ids_match
-          process_gallery(ids_match[1])
-        else
-          match
-        end
+      # Handle gallery shortcodes with unescaped brackets
+      input = input.gsub(/\[gallery[^\]]*ids=["']([^"'\]]+)["'][^\]]*\]/) do |match|
+        process_gallery($1)
       end
       
-      content
+      input
     end
     
     private
     
     def process_gallery(ids_string)
-      ids = ids_string.split(',')
+      return '' unless ids_string
+      
+      ids = ids_string.split(',').map(&:strip)
       gallery_html = '<div class="gallery">'
+      
       ids.each do |id|
-        image = @context.registers[:site].data['wp_images'].find { |img| img['id'] == id.strip }
+        # Try to find image in site data
+        image = begin
+          site = @context.registers[:site]
+          if site && site.data && site.data['wp_images']
+            site.data['wp_images'].find { |img| img['id'].to_s == id.to_s }
+          end
+        rescue
+          nil
+        end
+        
         if image
-          # Extract just the filename from the URL
-          filename = File.basename(image['url'])
-          # Create the new path in assets/images
-          new_url = "/assets/images/#{filename}"
+          filename = File.basename(image['url'].to_s)
+          new_url = "#{@context.registers[:site].config['baseurl']}/assets/images/#{filename}"
           gallery_html += %Q{<img src="#{new_url}" alt="#{image['title']}" class="gallery-image">}
         end
       end
+      
       gallery_html += '</div>'
       gallery_html
     end
