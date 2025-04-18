@@ -18,54 +18,70 @@ module Jekyll
   end
 
   module GalleryFilter
-    def transform_gallery(input)
-      return input unless input.is_a?(String)
+    def transform_gallery(content)
+      return content unless content.is_a?(String)
       
       # Load CSV data if not already loaded
-      unless @wp_images
+      unless @context.registers[:site].data['wp_images']
+        puts "Loading CSV data..."
         csv_path = File.join(@context.registers[:site].source, 'assets', 'wp_images.csv')
+        puts "CSV path: #{csv_path}"
+        
         if File.exist?(csv_path)
           require 'csv'
-          @wp_images = []
-          CSV.foreach(csv_path, headers: true) do |row|
-            @wp_images << {
-              'id' => row['id'],
-              'url' => row['url'],
-              'title' => row['title'] || ''
-            }
+          @context.registers[:site].data['wp_images'] = CSV.read(csv_path, headers: true).map do |row|
+            { 'id' => row['id'], 'url' => row['url'] }
           end
+          puts "Loaded #{@context.registers[:site].data['wp_images'].size} images from CSV"
         else
-          @wp_images = []
+          puts "CSV file not found at #{csv_path}"
+          return content
         end
       end
-      
-      # Handle gallery shortcodes with escaped brackets
-      input.gsub(/\\\[gallery[^\]]*ids=["']([^"'\]]+)["'][^\]]*\\\]/) do |match|
-        process_gallery($1)
+
+      # Process unescaped shortcodes
+      content = content.gsub(/\[gallery[^\]]*ids=[""]([^""]*)[^\]\]]*\]/) do |match|
+        puts "Found unescaped gallery: #{match}"
+        process_gallery($1, @context.registers[:site])
       end
+
+      # Process escaped shortcodes
+      content = content.gsub(/\\\[gallery[^\]]*ids=[""]([^""]*)[^\]\]]*\\\]/) do |match|
+        puts "Found escaped gallery: #{match}"
+        process_gallery($1, @context.registers[:site])
+      end
+
+      content
     end
     
     private
     
-    def process_gallery(ids_string)
-      return '' unless ids_string
+    def process_gallery(ids, site)
+      puts "Processing gallery with IDs: #{ids}"
+      image_ids = ids.split(',').map(&:strip)
+      puts "Split IDs: #{image_ids.inspect}"
       
-      ids = ids_string.split(',').map(&:strip)
-      gallery_html = '<div class="gallery">'
+      images = image_ids.map do |id|
+        image = site.data['wp_images'].find { |img| img['id'] == id }
+        puts "Found image for ID #{id}: #{image ? image['url'] : 'not found'}"
+        image
+      end.compact
       
-      ids.each do |id|
-        image = @wp_images.find { |img| img['id'].to_s == id.to_s }
-        if image
-          filename = File.basename(image['url'].to_s)
-          new_url = "/assets/images/#{filename}"
-          gallery_html += %Q{<img src="#{new_url}" alt="#{image['title']}" class="gallery-image">}
-        end
+      puts "Found #{images.size} images out of #{image_ids.size} IDs"
+      
+      html = '<div class="gallery">'
+      images.each do |image|
+        filename = File.basename(image['url'])
+        new_url = "/assets/images/#{filename}"
+        html += "<img src=\"#{new_url}\" class=\"gallery-image\" alt=\"\">"
       end
+      html += '</div>'
       
-      gallery_html += '</div>'
-      gallery_html
+      puts "Generated HTML: #{html}"
+      html
     end
   end
 end
 
+Liquid::Template.register_filter(Jekyll::GalleryFilter) 
 Liquid::Template.register_filter(Jekyll::GalleryFilter) 
