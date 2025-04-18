@@ -3,26 +3,28 @@
 {% assign youtube_watch_links = processed_content | split: 'https://www.youtube.com/watch?v=' %}
 
 {% if youtube_links.size > 1 or youtube_watch_links.size > 1 %}
-  {% assign processed_content = '' %}
+  {% assign final_content = '' %}
   {% assign parts = processed_content | split: 'https://' %}
   
   {% for part in parts %}
     {% if forloop.first %}
-      {% assign processed_content = part %}
+      {% assign final_content = part %}
     {% else %}
       {% assign url = 'https://' | append: part %}
       {% if url contains 'youtu.be/' %}
         {% assign video_id = url | split: 'youtu.be/' | last | split: ' ' | first | split: '?' | first | split: '[/embed]' | first | split: '<' | first | split: '>' | first | split: '"' | first | split: "'" | first | strip %}
         {% assign remaining = part | remove_first: 'youtu.be/' | remove_first: video_id | remove_first: 'www.' %}
-        {% assign processed_content = processed_content | append: '<div class="youtube-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/' | append: video_id | append: '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>' | append: remaining %}
+        {% assign final_content = final_content | append: '<div class="youtube-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/' | append: video_id | append: '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>' | append: remaining %}
       {% elsif url contains 'youtube.com/watch?v=' %}
         {% assign video_id = url | split: 'youtube.com/watch?v=' | last | split: ' ' | first | split: '?' | first | split: '[/embed]' | first | split: '<' | first | split: '>' | first | split: '"' | first | split: "'" | first | strip %}
         {% assign remaining = part | remove_first: 'www.youtube.com/watch?v=' | remove_first: video_id | remove_first: 'www.' %}
-        {% assign processed_content = processed_content | append: '<div class="youtube-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/' | append: video_id | append: '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>' | append: remaining %}
+        {% assign final_content = final_content | append: '<div class="youtube-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/' | append: video_id | append: '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>' | append: remaining %}
       {% else %}
-        {% assign processed_content = processed_content | append: url %}
+        {% assign final_content = final_content | append: url %}
       {% endif %}
     {% endif %}
   {% endfor %}
-{% endif %}
-{{ processed_content }} 
+  {{ final_content }}
+{% else %}
+  {{ processed_content }}
+{% endif %} 
