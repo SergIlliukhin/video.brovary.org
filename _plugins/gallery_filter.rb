@@ -30,6 +30,22 @@ module Jekyll
           site = @context.registers[:site]
           if site && site.data && site.data['wp_images']
             site.data['wp_images'].find { |img| img['id'].to_s == id.to_s }
+          else
+            # Try to load from CSV file directly
+            csv_path = File.join(site.source, 'assets', 'wp_images.csv')
+            if File.exist?(csv_path)
+              require 'csv'
+              CSV.foreach(csv_path, headers: true) do |row|
+                if row['id'].to_s == id.to_s
+                  return {
+                    'id' => row['id'],
+                    'url' => row['url'],
+                    'title' => row['title'] || ''
+                  }
+                end
+              end
+            end
+            nil
           end
         rescue
           nil
