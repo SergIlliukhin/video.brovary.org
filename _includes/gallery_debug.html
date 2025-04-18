@@ -1,15 +1,11 @@
-{% assign images = site.data.wp_images | default: [] %}
+{% assign images = site.data.wp_images %}
 <div class="gallery-debug">
   <h3>Gallery Debug Info</h3>
-  <p>CSV file path: {{ site.source }}/assets/wp_images.csv</p>
-  <p>Total images loaded: {{ images.size }}</p>
-  {% if images.size > 0 %}
-    <ul>
-      {% for image in images limit:5 %}
-        <li>ID: {{ image.id }}, URL: {{ image.url }}</li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>No images loaded from CSV</p>
-  {% endif %}
+  <p>Total images loaded: {{ images | size }}</p>
+  <h4>First 5 images:</h4>
+  <ul>
+    {% for image in images limit:5 %}
+      <li>ID: {{ image.id }}, URL: {{ image.url }}</li>
+    {% endfor %}
+  </ul>
 </div> 

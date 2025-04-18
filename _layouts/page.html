@@ -8,6 +8,7 @@ layout: default
   </header>
 
   <div class="post-content">
+    {% include gallery_debug.html %}
     {{ content | transform_gallery | process_youtube_links }}
   </div>
 </article> 
