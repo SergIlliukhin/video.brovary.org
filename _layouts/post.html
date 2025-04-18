@@ -18,6 +18,7 @@ layout: default
   </header>
 
   <div class="post-content">
+    {{ content | transform_gallery }}
     {% include process_youtube_links.html %}
   </div>
 </article> 
