@@ -21,6 +21,8 @@ module Jekyll
     def transform_gallery(content)
       return content unless content.is_a?(String)
       
+      puts "Starting gallery transformation..."
+      
       # Load CSV data if not already loaded
       unless @context.registers[:site].data['wp_images']
         puts "Loading CSV data..."
@@ -29,10 +31,15 @@ module Jekyll
         
         if File.exist?(csv_path)
           require 'csv'
-          @context.registers[:site].data['wp_images'] = CSV.read(csv_path, headers: true).map do |row|
-            { 'id' => row['id'], 'url' => row['url'] }
+          begin
+            @context.registers[:site].data['wp_images'] = CSV.read(csv_path, headers: true).map do |row|
+              { 'id' => row['image_id'], 'url' => row['image_name'] }
+            end
+            puts "Loaded #{@context.registers[:site].data['wp_images'].size} images from CSV"
+          rescue => e
+            puts "Error loading CSV: #{e.message}"
+            return content
           end
-          puts "Loaded #{@context.registers[:site].data['wp_images'].size} images from CSV"
         else
           puts "CSV file not found at #{csv_path}"
           return content
@@ -71,7 +78,7 @@ module Jekyll
       
       html = '<div class="gallery">'
       images.each do |image|
-        filename = File.basename(image['url'])
+        filename = image['url']
         new_url = "/assets/images/#{filename}"
         html += "<img src=\"#{new_url}\" class=\"gallery-image\" alt=\"\">"
       end
@@ -83,5 +90,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_filter(Jekyll::GalleryFilter) 
 Liquid::Template.register_filter(Jekyll::GalleryFilter) 

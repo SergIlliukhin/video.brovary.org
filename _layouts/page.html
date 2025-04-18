@@ -2,20 +2,12 @@
 layout: default
 ---
 
-<article class="page">
-  {% if page.coverImage %}
-  <div class="page-cover">
-    <img src="{{ page.coverImage | prepend: '/assets/images/' | relative_url }}" alt="{{ page.title }} cover image">
-  </div>
-  {% endif %}
-
-  <header class="page-header">
-    <h1 class="page-title">{{ page.title }}</h1>
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
   </header>
 
-  <div class="page-content">
-    {% include gallery_debug.html %}
-    {{ content | transform_gallery }}
-    {% include process_youtube_links.html %}
+  <div class="post-content">
+    {{ content | transform_gallery | process_youtube_links }}
   </div>
 </article> 
