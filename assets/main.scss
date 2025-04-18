@@ -13,4 +13,16 @@
     height: 100%;
     border: none;
   }
+}
+
+.gallery {
+  margin: 20px 0;
+  
+  .gallery-image {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    display: block;
+  }
 } 
