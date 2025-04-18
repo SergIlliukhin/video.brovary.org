@@ -1,10 +1,10 @@
-{% assign processed_content = content %}
-{% assign youtube_links = content | split: 'https://youtu.be/' %}
-{% assign youtube_watch_links = content | split: 'https://www.youtube.com/watch?v=' %}
+{% assign processed_content = content | transform_gallery %}
+{% assign youtube_links = processed_content | split: 'https://youtu.be/' %}
+{% assign youtube_watch_links = processed_content | split: 'https://www.youtube.com/watch?v=' %}
 
 {% if youtube_links.size > 1 or youtube_watch_links.size > 1 %}
   {% assign processed_content = '' %}
-  {% assign parts = content | split: 'https://' %}
+  {% assign parts = processed_content | split: 'https://' %}
   
   {% for part in parts %}
     {% if forloop.first %}
