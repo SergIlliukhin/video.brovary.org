@@ -21,6 +21,24 @@ module Jekyll
     def transform_gallery(input)
       return input unless input.is_a?(String)
       
+      # Load CSV data if not already loaded
+      unless @wp_images
+        csv_path = File.join(@context.registers[:site].source, 'assets', 'wp_images.csv')
+        if File.exist?(csv_path)
+          require 'csv'
+          @wp_images = []
+          CSV.foreach(csv_path, headers: true) do |row|
+            @wp_images << {
+              'id' => row['id'],
+              'url' => row['url'],
+              'title' => row['title'] || ''
+            }
+          end
+        else
+          @wp_images = []
+        end
+      end
+      
       # Handle gallery shortcodes with escaped brackets
       input.gsub(/\\\[gallery[^\]]*ids=["']([^"'\]]+)["'][^\]]*\\\]/) do |match|
         process_gallery($1)
@@ -36,7 +54,7 @@ module Jekyll
       gallery_html = '<div class="gallery">'
       
       ids.each do |id|
-        image = find_image(id)
+        image = @wp_images.find { |img| img['id'].to_s == id.to_s }
         if image
           filename = File.basename(image['url'].to_s)
           new_url = "/assets/images/#{filename}"
@@ -46,15 +64,6 @@ module Jekyll
       
       gallery_html += '</div>'
       gallery_html
-    end
-    
-    def find_image(id)
-      return nil unless @context && @context.registers[:site]
-      
-      site = @context.registers[:site]
-      return nil unless site.data && site.data['wp_images']
-      
-      site.data['wp_images'].find { |img| img['id'].to_s == id.to_s }
     end
   end
 end
