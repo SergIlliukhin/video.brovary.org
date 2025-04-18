@@ -1,10 +1,44 @@
 {% assign processed_content = content %}
-{% assign youtube_links = content | split: 'https://youtu.be/' %}
-{% assign youtube_watch_links = content | split: 'https://www.youtube.com/watch?v=' %}
+
+{% comment %}Process gallery tags{% endcomment %}
+{% assign gallery_tags = content | split: '[gallery' %}
+{% if gallery_tags.size > 1 %}
+  {% assign processed_content = '' %}
+  {% assign parts = content | split: '[gallery' %}
+  
+  {% for part in parts %}
+    {% if forloop.first %}
+      {% assign processed_content = part %}
+    {% else %}
+      {% assign gallery_content = part | split: ']' | first %}
+      {% assign remaining = part | remove_first: gallery_content | remove_first: ']' %}
+      
+      {% comment %}Extract image IDs from the gallery tag{% endcomment %}
+      {% assign ids = gallery_content | split: 'ids="' | last | split: '"' | first | split: ',' %}
+      
+      {% comment %}Create gallery HTML{% endcomment %}
+      {% assign gallery_html = '<div class="gallery">' %}
+      {% for id in ids %}
+        {% assign image_id = id | strip %}
+        {% assign image = site.data.wp_images | where: "image_id", image_id | first %}
+        {% if image %}
+          {% assign gallery_html = gallery_html | append: '<div class="gallery-item"><img src="/assets/images/' | append: image.image_name | append: '" alt="Gallery image"></div>' %}
+        {% endif %}
+      {% endfor %}
+      {% assign gallery_html = gallery_html | append: '</div>' %}
+      
+      {% assign processed_content = processed_content | append: gallery_html | append: remaining %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% comment %}Process YouTube links{% endcomment %}
+{% assign youtube_links = processed_content | split: 'https://youtu.be/' %}
+{% assign youtube_watch_links = processed_content | split: 'https://www.youtube.com/watch?v=' %}
 
 {% if youtube_links.size > 1 or youtube_watch_links.size > 1 %}
   {% assign processed_content = '' %}
-  {% assign parts = content | split: 'https://' %}
+  {% assign parts = processed_content | split: 'https://' %}
   
   {% for part in parts %}
     {% if forloop.first %}
@@ -25,4 +59,5 @@
     {% endif %}
   {% endfor %}
 {% endif %}
+
 {{ processed_content }} 
