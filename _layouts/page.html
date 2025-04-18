@@ -14,7 +14,6 @@ layout: default
   </header>
 
   <div class="page-content">
-    {{ content | transform_gallery }}
-    {% include process_youtube_links.html %}
+    {{ content | transform_gallery | youtube_embed }}
   </div>
 </article> 
