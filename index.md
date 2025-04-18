@@ -27,5 +27,5 @@ coverImage: /assets/images/header.jpeg
     {% endfor %}
   </div>
 {% else %}
-  <p>Зображення не знайдено</p>
+  <p>Зображення не знайдено. Дані: {{ site.data.wp_images | inspect }}</p>
 {% endif %}
