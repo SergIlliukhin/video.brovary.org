@@ -45,4 +45,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor 
+  - vendor
+
+image_path: "/video.brovary.org/assets/images/" 
