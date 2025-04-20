@@ -26,20 +26,7 @@
   {% endfor %}
 {% endif %}
 
-{% comment %}Process gallery shortcodes{% endcomment %}
-{% assign gallery_parts = processed_content | split: '[gallery' %}
-{% if gallery_parts.size > 1 %}
-  {% assign processed_content = '' %}
-  {% for part in gallery_parts %}
-    {% if forloop.first %}
-      {% assign processed_content = part %}
-    {% else %}
-      {% assign gallery_content = part | split: ']' | first %}
-      {% assign remaining = part | remove_first: gallery_content | remove_first: ']' %}
-      {% assign ids = gallery_content | split: 'ids="' | last | split: '"' | first %}
-      {% assign processed_content = processed_content | append: ids | append: remaining %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
+{% comment %}Process gallery shortcodes using regex{% endcomment %}
+{% assign processed_content = processed_content | replace: '\[gallery[^\]]*ids="([^"]+)"[^\]]*\]', '\1' %}
 
 {{ processed_content }} 
