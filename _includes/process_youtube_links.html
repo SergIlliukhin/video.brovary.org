@@ -28,7 +28,7 @@
 
 {% comment %}Process gallery shortcodes using regex{% endcomment %}
 {% assign before = processed_content %}
-{% assign processed_content = processed_content | replace: '\[gallery[^\]]*ids=[""]([^""]+)[""][^\]]*\]', '\1' %}
+{% assign processed_content = processed_content | replace: '\\[gallery[^\\]]*ids=["”]([^"”]+)["”][^\\]]*\\]', '\\1' %}
 {% assign after = processed_content %}
 
 <!-- Debug output -->
