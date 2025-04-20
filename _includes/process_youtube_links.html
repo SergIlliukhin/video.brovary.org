@@ -25,4 +25,21 @@
     {% endif %}
   {% endfor %}
 {% endif %}
+
+{% comment %}Process gallery shortcodes{% endcomment %}
+{% assign gallery_parts = processed_content | split: '[gallery' %}
+{% if gallery_parts.size > 1 %}
+  {% assign processed_content = '' %}
+  {% for part in gallery_parts %}
+    {% if forloop.first %}
+      {% assign processed_content = part %}
+    {% else %}
+      {% assign gallery_attrs = part | split: ']' | first %}
+      {% assign remaining = part | remove_first: gallery_attrs | remove_first: ']' %}
+      {% assign ids = gallery_attrs | split: 'ids="' | last | split: '"' | first %}
+      {% assign processed_content = processed_content | append: ids | append: remaining %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
 {{ processed_content }} 
