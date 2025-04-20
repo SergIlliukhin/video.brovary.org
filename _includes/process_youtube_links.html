@@ -27,6 +27,7 @@
 {% endif %}
 
 {% comment %}Process gallery shortcodes using regex{% endcomment %}
-{% assign processed_content = processed_content | replace: '\\?\[gallery[^\]]*ids=["”](.+)["”][^\]]*\\?\]', '\1' %}
+{% assign processed_content = processed_content | replace: '\\?\[gallery[^\]]*ids=[""](.+)[""][^\]]*\\?\]', '\1' %}
+{% assign processed_content = processed_content | append: 'hello from Sergii' %}
 
 {{ processed_content }} 
