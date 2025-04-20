@@ -34,10 +34,9 @@
     {% if forloop.first %}
       {% assign processed_content = part %}
     {% else %}
-      {% assign gallery_attrs = part | split: ']' | first %}
-      {% assign remaining = part | remove_first: gallery_attrs | remove_first: ']' %}
-      {% assign ids_part = gallery_attrs | split: 'ids="' | last %}
-      {% assign ids = ids_part | split: '"' | first %}
+      {% assign gallery_content = part | split: ']' | first %}
+      {% assign remaining = part | remove_first: gallery_content | remove_first: ']' %}
+      {% assign ids = gallery_content | split: 'ids="' | last | split: '"' | first %}
       {% assign processed_content = processed_content | append: ids | append: remaining %}
     {% endif %}
   {% endfor %}
