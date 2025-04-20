@@ -10,4 +10,8 @@ coverImage: "ytb-wp.jpg"
 
 \[embed\]https://youtu.be/fA\_v4IdcvYo\[/embed\]
 
-\[gallery columns="1" size="full" ids="31,28,29,30,26"\]
+![Image 31](/assets/images/3066-1.jpg)
+![Image 28](/assets/images/3072.jpg)
+![Image 29](/assets/images/3076.jpg)
+![Image 30](/assets/images/3103.jpg)
+![Image 26](/assets/images/3105.jpg)
