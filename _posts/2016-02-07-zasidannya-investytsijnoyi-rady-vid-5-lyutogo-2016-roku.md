@@ -44,7 +44,7 @@ https://youtu.be/02OX2tWOZdw
 
 **Доступні наступні документи:**
 
-\![Image 326]({{ site.image_path }}Investytsijna-rada-BMR-1.png)
+![Image 326]({{ site.image_path }}Investytsijna-rada-BMR-1.png)
 ![Image 327]({{ site.image_path }}Investytsijna-rada-BMR-2.png)
 ![Image 328]({{ site.image_path }}Investytsijna-rada-BMR-3.png)
 ![Image 329]({{ site.image_path }}Investytsijna-rada-BMR-4.png)

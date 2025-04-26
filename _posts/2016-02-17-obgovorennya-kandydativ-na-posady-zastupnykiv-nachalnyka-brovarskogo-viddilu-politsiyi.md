@@ -10,7 +10,7 @@ coverImage: "wp-top-8.jpg"
 
 https://youtu.be/DODH\_tq2CaY Начальник Броварського відділу поліції, Янчинський Олег Віталійович представив двох кандидатів: 1) Тетерук Євген Вікторович 2) Мазуренко Ярослав Павлович
 
-\![Image 518]({{ site.image_path }}IMG_6596.jpg)
+![Image 518]({{ site.image_path }}IMG_6596.jpg)
 ![Image 517]({{ site.image_path }}IMG_6683.jpg)
 ![Image 516]({{ site.image_path }}IMG_6679.jpg)
 ![Image 515]({{ site.image_path }}IMG_6676.jpg)

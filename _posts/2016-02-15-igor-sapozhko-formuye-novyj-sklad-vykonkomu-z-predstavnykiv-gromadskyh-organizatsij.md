@@ -12,7 +12,7 @@ https://youtu.be/yNB1SjiFnBM
 
 **ФОТО:**
 
-\![Image 464]({{ site.image_path }}6435.jpg)
+![Image 464]({{ site.image_path }}6435.jpg)
 ![Image 465]({{ site.image_path }}6436.jpg)
 ![Image 463]({{ site.image_path }}6431.jpg)
 ![Image 462]({{ site.image_path }}6439.jpg)

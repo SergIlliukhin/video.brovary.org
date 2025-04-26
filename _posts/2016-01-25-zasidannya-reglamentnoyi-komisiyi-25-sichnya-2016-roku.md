@@ -18,6 +18,6 @@ https://youtu.be/augcKzMpcAQ
 
  
 
-\![Image 60]({{ site.image_path }}4332.jpg)
+![Image 60]({{ site.image_path }}4332.jpg)
 ![Image 61]({{ site.image_path }}4328-1.jpg)
 ![Image 62]({{ site.image_path }}YTB.jpg)

@@ -12,6 +12,6 @@ coverImage: "WP-tor.jpg"
 
  
 
-\![Image 239]({{ site.image_path }}IMG_5017.jpg)
+![Image 239]({{ site.image_path }}IMG_5017.jpg)
 ![Image 238]({{ site.image_path }}IMG_5016.jpg)
 ![Image 237]({{ site.image_path }}IMG_5019.jpg)

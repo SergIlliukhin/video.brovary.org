@@ -10,13 +10,13 @@ coverImage: "WPS.jpg"
 
 https://youtu.be/m22leTYlXnM Головував Андрій Саук, депутат Броварської міської ради від партії ДемАльянс:
 
-\![Image 411]({{ site.image_path }}6011.jpg)
+![Image 411]({{ site.image_path }}6011.jpg)
 
  
 
 Контактний телефон ініціативної групи  (050) 520-36-52
 
-\![Image 412]({{ site.image_path }}YTB-1.jpg)
+![Image 412]({{ site.image_path }}YTB-1.jpg)
 
 Група в Facebook: ["Житловий комплекс на Грушевського 19-21"](https://www.facebook.com/%D0%96%D0%B8%D1%82%D0%BB%D0%BE%D0%B2%D0%B8%D0%B9-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81-%D0%BD%D0%B0-%D0%93%D1%80%D1%83%D1%88%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE-19-21-325559254202744/?fref=ts)
 

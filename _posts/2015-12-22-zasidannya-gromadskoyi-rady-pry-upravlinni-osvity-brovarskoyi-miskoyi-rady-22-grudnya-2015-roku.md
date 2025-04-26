@@ -14,7 +14,7 @@ coverImage: "WP-4.jpg"
 
 https://youtu.be/Yinu-CQlOrE
 
-\![Image 117]({{ site.image_path }}IMG_2667.jpg)
+![Image 117]({{ site.image_path }}IMG_2667.jpg)
 ![Image 118]({{ site.image_path }}IMG_2668.jpg)
 ![Image 119]({{ site.image_path }}IMG_2672.jpg)
 ![Image 116]({{ site.image_path }}IMG_2676.jpg)

@@ -28,7 +28,7 @@ https://youtu.be/LJN8D1CuXAw
 
 ![Тиха Хода. Звернення до Ігоря Сапожко](images/lyst-2-775x1024.jpg)
 
-\![Image 480]({{ site.image_path }}f3.jpg)
+![Image 480]({{ site.image_path }}f3.jpg)
 ![Image 481]({{ site.image_path }}f2.jpg)
 ![Image 483]({{ site.image_path }}704.jpg)
 ![Image 485]({{ site.image_path }}702.jpg)

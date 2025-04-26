@@ -56,7 +56,7 @@ https://youtu.be/JfgNdVqK7Vs
 
 **ФОТО:**
 
-\![Image 446]({{ site.image_path }}Malofiyenko-Viktor-Vasylovych.jpg)
+![Image 446]({{ site.image_path }}Malofiyenko-Viktor-Vasylovych.jpg)
 ![Image 444]({{ site.image_path }}Golubovskyj-Grygorij-Pavlovych.jpg)
 ![Image 447]({{ site.image_path }}Pidtoplennya-3.jpg)
 ![Image 448]({{ site.image_path }}Pidtoplennya-4.jpg)

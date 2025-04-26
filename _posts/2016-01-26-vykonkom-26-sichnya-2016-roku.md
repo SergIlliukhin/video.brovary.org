@@ -12,7 +12,7 @@ coverImage: "WP.jpg"
 
 https://youtu.be/9apj\_6rwajU
 
-\![Image 87]({{ site.image_path }}IMG_4477.jpg)
+![Image 87]({{ site.image_path }}IMG_4477.jpg)
 ![Image 88]({{ site.image_path }}IMG_4474.jpg)
 ![Image 89]({{ site.image_path }}IMG_4475.jpg)
 

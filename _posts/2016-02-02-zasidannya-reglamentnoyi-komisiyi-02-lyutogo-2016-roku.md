@@ -18,7 +18,7 @@ https://youtu.be/mwuP8sUv72M
 
  
 
-\![Image 263]({{ site.image_path }}IMG_5131.jpg)
+![Image 263]({{ site.image_path }}IMG_5131.jpg)
 ![Image 266]({{ site.image_path }}IMG_5137.jpg)
 ![Image 267]({{ site.image_path }}IMG_5138.jpg)
 ![Image 268]({{ site.image_path }}IMG_5158.jpg)

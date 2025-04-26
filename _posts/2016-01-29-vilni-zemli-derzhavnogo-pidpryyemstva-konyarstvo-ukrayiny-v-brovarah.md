@@ -16,7 +16,7 @@ coverImage: "wp.jpg"
 
 \[embed\]https://youtu.be/KqhRAYy1nGg\[/embed\]
 
-\![Image 195]({{ site.image_path }}009.jpg)
+![Image 195]({{ site.image_path }}009.jpg)
 ![Image 196]({{ site.image_path }}010.jpg)
 ![Image 197]({{ site.image_path }}020.jpg)
 ![Image 198]({{ site.image_path }}030.jpg)

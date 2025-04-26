@@ -62,5 +62,5 @@ https://youtu.be/HenhpLJ2\_lg
 
 **ФОТО:**
 
-\![Image 470]({{ site.image_path }}6454.jpg)
+![Image 470]({{ site.image_path }}6454.jpg)
 ![Image 471]({{ site.image_path }}6453.jpg)

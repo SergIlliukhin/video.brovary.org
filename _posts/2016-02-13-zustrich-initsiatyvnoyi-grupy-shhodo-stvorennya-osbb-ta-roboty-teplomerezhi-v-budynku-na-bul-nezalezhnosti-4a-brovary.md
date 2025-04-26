@@ -73,7 +73,7 @@ https://youtu.be/KyZJj-\_qtWs
 
 **ФОТО:**
 
-\![Image 420]({{ site.image_path }}6313.jpg)
+![Image 420]({{ site.image_path }}6313.jpg)
 ![Image 421]({{ site.image_path }}6317.jpg)
 ![Image 422]({{ site.image_path }}6335.jpg)
 ![Image 423]({{ site.image_path }}6349.jpg)

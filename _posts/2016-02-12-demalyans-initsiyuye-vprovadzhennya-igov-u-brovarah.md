@@ -16,7 +16,7 @@ https://youtu.be/Bl8fNpTn1vo
 
 Були обговорені подальші кроки щодо впровадження системи [IGov](https://igov.org.ua/) в Броварах.
 
-\![Image 436]({{ site.image_path }}IGpv-40.jpg)
+![Image 436]({{ site.image_path }}IGpv-40.jpg)
 ![Image 437]({{ site.image_path }}IGpv-50.jpg)
 ![Image 433]({{ site.image_path }}IGpv-60.jpg)
 ![Image 434]({{ site.image_path }}IGpv-10.jpg)

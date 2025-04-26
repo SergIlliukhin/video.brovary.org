@@ -60,5 +60,5 @@ https://youtu.be/PIGfV0yo2gQ
 
  
 
-\![Image 453]({{ site.image_path }}6418.jpg)
+![Image 453]({{ site.image_path }}6418.jpg)
 ![Image 454]({{ site.image_path }}6414.jpg)

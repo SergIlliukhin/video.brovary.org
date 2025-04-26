@@ -14,7 +14,7 @@ coverImage: "golovna-1.jpg"
 
 https://youtu.be/-wCNQpABQVs
 
-\![Image 73]({{ site.image_path }}4361.jpg)
+![Image 73]({{ site.image_path }}4361.jpg)
 ![Image 74]({{ site.image_path }}4371.jpg)
 ![Image 72]({{ site.image_path }}4344.jpg)
 ![Image 80]({{ site.image_path }}4352.jpg)
