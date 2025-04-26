@@ -10,4 +10,6 @@ coverImage: "IMG_4552.jpg"
 
 https://youtu.be/NjAlASUnH3s
 
-\[gallery columns="1" size="full" ids="96,94,95"\]
+\![Image 96]({{ site.image_path }}IMG_4555.jpg)
+![Image 94]({{ site.image_path }}IMG_4450.jpg)
+![Image 95]({{ site.image_path }}IMG_4552-1.jpg)

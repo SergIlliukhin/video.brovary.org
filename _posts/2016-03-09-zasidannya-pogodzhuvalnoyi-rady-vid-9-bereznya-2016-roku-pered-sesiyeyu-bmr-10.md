@@ -22,4 +22,4 @@ https://youtu.be/wcTlhcJGfMQ
 
 ФОТО:
 
-\[gallery columns="1" size="large" ids="734,735,736,733"\]
+\

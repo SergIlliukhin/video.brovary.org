@@ -12,4 +12,4 @@ https://youtu.be/L471nf-8wyQ
 
 ФОТО:
 
-\[gallery columns="1" size="large" ids="911,910,912"\]
+\

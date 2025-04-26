@@ -12,4 +12,4 @@ https://youtu.be/XhxYfOUReZU
 
 <iframe src="https://docs.google.com/presentation/d/1nnwzI19l1-gku2rG0LrVMsN78IW2W83gWudHAmkYKvc/embed?start=false&amp;loop=false&amp;delayms=3000" width="960" height="569" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
-\[gallery columns="1" size="large" ids="975,974,973,972"\]
+\

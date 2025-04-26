@@ -73,4 +73,11 @@ https://youtu.be/KyZJj-\_qtWs
 
 **ФОТО:**
 
-\[gallery columns="1" size="large" ids="420,421,422,423,424,426,425,427"\]
+\![Image 420]({{ site.image_path }}6313.jpg)
+![Image 421]({{ site.image_path }}6317.jpg)
+![Image 422]({{ site.image_path }}6335.jpg)
+![Image 423]({{ site.image_path }}6349.jpg)
+![Image 424]({{ site.image_path }}6355.jpg)
+![Image 426]({{ site.image_path }}6392.jpg)
+![Image 425]({{ site.image_path }}6377.jpg)
+![Image 427]({{ site.image_path }}6395.jpg)

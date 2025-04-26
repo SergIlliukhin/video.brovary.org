@@ -78,4 +78,4 @@ https://youtu.be/ZYbahYrv98I
 
  **ФОТО:**
 
-\[gallery columns="1" size="large" ids="705,706,707,708,709,704"\]
+\

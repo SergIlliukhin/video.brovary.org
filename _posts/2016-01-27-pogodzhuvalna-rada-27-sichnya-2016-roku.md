@@ -14,4 +14,7 @@ https://youtu.be/nxJ-ZYTUk0k
 
  
 
-\[gallery columns="1" size="full" ids="109,108,107,110"\]
+\![Image 109]({{ site.image_path }}4508.jpg)
+![Image 108]({{ site.image_path }}4503.jpg)
+![Image 107]({{ site.image_path }}4513.jpg)
+![Image 110]({{ site.image_path }}4510.jpg)

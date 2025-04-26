@@ -56,4 +56,11 @@ https://youtu.be/JfgNdVqK7Vs
 
 **ФОТО:**
 
-\[gallery columns="1" size="large" ids="446,444,447,448,445,449,443,450"\]
+\![Image 446]({{ site.image_path }}Malofiyenko-Viktor-Vasylovych.jpg)
+![Image 444]({{ site.image_path }}Golubovskyj-Grygorij-Pavlovych.jpg)
+![Image 447]({{ site.image_path }}Pidtoplennya-3.jpg)
+![Image 448]({{ site.image_path }}Pidtoplennya-4.jpg)
+![Image 445]({{ site.image_path }}Ivchenko-Kateryna-Anatoliyivna-TRANSPROEKT.jpg)
+![Image 449]({{ site.image_path }}Pidtoplennya-5.jpg)
+![Image 443]({{ site.image_path }}Bilenko-Myhajlo-Markovych.jpg)
+![Image 450]({{ site.image_path }}Pidtoplennya-8.jpg)

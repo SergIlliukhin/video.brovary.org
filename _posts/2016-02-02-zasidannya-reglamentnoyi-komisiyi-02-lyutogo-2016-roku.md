@@ -18,4 +18,9 @@ https://youtu.be/mwuP8sUv72M
 
  
 
-\[gallery columns="1" size="large" ids="263,266,267,268,269,262"\]
+\![Image 263]({{ site.image_path }}IMG_5131.jpg)
+![Image 266]({{ site.image_path }}IMG_5137.jpg)
+![Image 267]({{ site.image_path }}IMG_5138.jpg)
+![Image 268]({{ site.image_path }}IMG_5158.jpg)
+![Image 269]({{ site.image_path }}IMG_5163.jpg)
+![Image 262]({{ site.image_path }}IMG_5166.jpg)

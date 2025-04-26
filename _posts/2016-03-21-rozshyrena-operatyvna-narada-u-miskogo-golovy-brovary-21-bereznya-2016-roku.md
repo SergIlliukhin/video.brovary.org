@@ -54,4 +54,4 @@ https://youtu.be/WdQd1-Vc\_AE
 
 Кінець.
 
-\[gallery columns="1" size="large" ids="895,896"\]
+\

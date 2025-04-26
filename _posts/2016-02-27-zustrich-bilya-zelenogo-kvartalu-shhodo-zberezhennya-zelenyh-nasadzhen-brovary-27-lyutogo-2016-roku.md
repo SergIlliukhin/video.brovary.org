@@ -12,8 +12,8 @@ https://youtu.be/bhmZYHf3C6g
 
 **ФОТО:**
 
-\[gallery columns="1" size="large" ids="596,597,598"\]
+\
 
 А ця поважна людина фотографувала зустріч з третього поверху парковки:
 
-\[gallery size="large" columns="1" ids="599,600"\]
+\

@@ -10,4 +10,8 @@ coverImage: "WP-1.jpg"
 
 https://youtu.be/wEikEZU9Sq8
 
-\[gallery columns="1" size="full" ids="101,102,103,100,104"\]
+\![Image 101]({{ site.image_path }}IMG_4460.jpg)
+![Image 102]({{ site.image_path }}IMG_4463.jpg)
+![Image 103]({{ site.image_path }}IMG_4466.jpg)
+![Image 100]({{ site.image_path }}IMG_4469.jpg)
+![Image 104]({{ site.image_path }}IMG_4468.jpg)

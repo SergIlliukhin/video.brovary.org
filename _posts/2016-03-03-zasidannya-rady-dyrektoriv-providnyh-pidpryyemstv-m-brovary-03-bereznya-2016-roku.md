@@ -32,4 +32,4 @@ https://youtu.be/T4kd9\_ml\_3o
 
 **Фото:**
 
-\[gallery columns="1" size="large" ids="652,651"\]
+\

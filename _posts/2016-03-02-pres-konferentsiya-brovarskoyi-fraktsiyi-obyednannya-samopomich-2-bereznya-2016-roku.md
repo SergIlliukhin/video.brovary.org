@@ -82,4 +82,4 @@ https://youtu.be/ZFBrw7mSK44
 
  
 
-\[gallery columns="1" size="large" ids="637,638,639,640,641,642,643,644,645"\]
+\

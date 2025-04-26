@@ -12,7 +12,7 @@ https://youtu.be/M0nsQEjkDT0
 
 ФОТО:
 
-\[gallery columns="1" size="large" ids="931,932"\]
+\
 
 Порядок денний:
 

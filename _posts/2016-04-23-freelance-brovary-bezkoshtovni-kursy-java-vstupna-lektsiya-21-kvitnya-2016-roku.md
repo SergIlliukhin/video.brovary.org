@@ -26,4 +26,4 @@ https://www.youtube.com/watch?v=\_hVvW8ChXQA
 
 **Місцезнаходження:** приміщення на вул.Грушевського 9/1, офіс "ДемАльянсу"
 
-\[gallery columns="1" size="large" ids="990,991,992"\]
+\

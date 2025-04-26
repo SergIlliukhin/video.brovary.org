@@ -56,4 +56,6 @@ https://youtu.be/xT6VGX9DPew
 
 1:12:20 Кінець сесії.
 
-\[gallery columns="1" size="large" ids="159,160,158"\]
+\![Image 159]({{ site.image_path }}4688.jpg)
+![Image 160]({{ site.image_path }}4692.jpg)
+![Image 158]({{ site.image_path }}4695.jpg)

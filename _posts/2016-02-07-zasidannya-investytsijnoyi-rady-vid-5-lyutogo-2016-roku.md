@@ -44,4 +44,12 @@ https://youtu.be/02OX2tWOZdw
 
 **Доступні наступні документи:**
 
-\[gallery columns="2" size="medium" ids="326,327,328,329,330,331,332,333,334"\]
+\![Image 326]({{ site.image_path }}Investytsijna-rada-BMR-1.png)
+![Image 327]({{ site.image_path }}Investytsijna-rada-BMR-2.png)
+![Image 328]({{ site.image_path }}Investytsijna-rada-BMR-3.png)
+![Image 329]({{ site.image_path }}Investytsijna-rada-BMR-4.png)
+![Image 330]({{ site.image_path }}Investytsijna-rada-BMR-5.png)
+![Image 331]({{ site.image_path }}Investytsijna-rada-BMR-6.png)
+![Image 332]({{ site.image_path }}Investytsijna-rada-BMR-7.png)
+![Image 333]({{ site.image_path }}Investytsijna-rada-BMR-8.png)
+![Image 334]({{ site.image_path }}Investytsijna-rada-BMR-9.png)

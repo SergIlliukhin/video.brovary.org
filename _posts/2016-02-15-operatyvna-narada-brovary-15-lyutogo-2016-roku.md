@@ -60,4 +60,5 @@ https://youtu.be/PIGfV0yo2gQ
 
  
 
-\[gallery columns="1" size="large" ids="453,454"\]
+\![Image 453]({{ site.image_path }}6418.jpg)
+![Image 454]({{ site.image_path }}6414.jpg)

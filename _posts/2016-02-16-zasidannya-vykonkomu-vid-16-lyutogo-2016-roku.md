@@ -62,4 +62,5 @@ https://youtu.be/HenhpLJ2\_lg
 
 **ФОТО:**
 
-\[gallery columns="1" size="large" ids="470,471"\]
+\![Image 470]({{ site.image_path }}6454.jpg)
+![Image 471]({{ site.image_path }}6453.jpg)

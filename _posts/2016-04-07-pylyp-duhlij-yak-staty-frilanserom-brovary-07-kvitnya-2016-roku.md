@@ -16,4 +16,4 @@ https://youtu.be/cLcgA1Z4MdE
 
 ФОТО:
 
-\[gallery columns="1" size="large" ids="954,955,956,957,958,959,960,961,962,963,964,953,965"\]
+\
