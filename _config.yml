@@ -39,6 +39,7 @@ defaults:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - image_path_processor
 
 # Exclude from processing
 exclude:
@@ -47,4 +48,4 @@ exclude:
   - node_modules
   - vendor
 
-image_path: "/video.brovary.org/assets/images/" 
+image_path: "{{ site.baseurl }}/assets/images/" 
